@@ -1,781 +1,197 @@
 <html>
-	<head>
+	
+<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		
 		<title>Mar Maestro - Portfolio</title>
-		<style>
-			/* cspell:disable-file */
-			/* webkit printing magic: print all background colors */
-			html {
-				-webkit-print-color-adjust: exact;
-			}
-			* {
-				box-sizing: border-box;
-				-webkit-print-color-adjust: exact;
-			}
+		
+		<link rel="stylesheet" type="text/css" href="styles/main-style.css">
 
-			html,
-			body {
-				margin: 0;
-				padding: 0;
-			}
-			@media only screen {
-				body {
-					margin: 2em auto;
-					max-width: 900px;
-					color: rgb(55, 53, 47);
-				}
-			}
-
-			body {
-				line-height: 1.5;
-				white-space: pre-wrap;
-			}
-
-			a,
-			a.visited {
-				color: inherit;
-				text-decoration: underline;
-			}
-
-			.pdf-relative-link-path {
-				font-size: 80%;
-				color: #444;
-			}
-
-			h1,
-			h2,
-			h3 {
-				letter-spacing: -0.01em;
-				line-height: 1.2;
-				font-weight: 600;
-				margin-bottom: 0;
-			}
-
-			.page-title {
-				font-size: 2.5rem;
-				font-weight: 700;
-				margin-top: 0;
-				margin-bottom: 0.75em;
-			}
-
-			h1 {
-				font-size: 1.875rem;
-				margin-top: 1.875rem;
-			}
-
-			h2 {
-				font-size: 1.5rem;
-				margin-top: 1.5rem;
-			}
-
-			h3 {
-				font-size: 1.25rem;
-				margin-top: 1.25rem;
-			}
-
-			.source {
-				border: 1px solid #ddd;
-				border-radius: 3px;
-				padding: 1.5em;
-				word-break: break-all;
-			}
-
-			.callout {
-				border-radius: 3px;
-				padding: 1rem;
-			}
-
-			figure {
-				margin: 1.25em 0;
-				page-break-inside: avoid;
-			}
-
-			figcaption {
-				opacity: 0.5;
-				font-size: 85%;
-				margin-top: 0.5em;
-			}
-
-			mark {
-				background-color: transparent;
-			}
-
-			.indented {
-				padding-left: 1.5em;
-			}
-
-			hr {
-				background: transparent;
-				display: block;
-				width: 100%;
-				height: 1px;
-				visibility: visible;
-				border: none;
-				border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-			}
-
-			img {
-				max-width: 100%;
-			}
-
-			@media only print {
-				img {
-					max-height: 100vh;
-					object-fit: contain;
-				}
-			}
-
-			@page {
-				margin: 1in;
-			}
-
-			.collection-content {
-				font-size: 0.875rem;
-			}
-
-			.column-list {
-				display: flex;
-				justify-content: space-between;
-			}
-
-			.column {
-				padding: 0 1em;
-			}
-
-			.column:first-child {
-				padding-left: 0;
-			}
-
-			.column:last-child {
-				padding-right: 0;
-			}
-
-			.table_of_contents-item {
-				display: block;
-				font-size: 0.875rem;
-				line-height: 1.3;
-				padding: 0.125rem;
-			}
-
-			.table_of_contents-indent-1 {
-				margin-left: 1.5rem;
-			}
-
-			.table_of_contents-indent-2 {
-				margin-left: 3rem;
-			}
-
-			.table_of_contents-indent-3 {
-				margin-left: 4.5rem;
-			}
-
-			.table_of_contents-link {
-				text-decoration: none;
-				opacity: 0.7;
-				border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-			}
-
-			table,
-			th,
-			td {
-				border: 1px solid rgba(55, 53, 47, 0.09);
-				border-collapse: collapse;
-			}
-
-			table {
-				border-left: none;
-				border-right: none;
-			}
-
-			th,
-			td {
-				font-weight: normal;
-				padding: 0.25em 0.5em;
-				line-height: 1.5;
-				min-height: 1.5em;
-				text-align: left;
-			}
-
-			th {
-				color: rgba(55, 53, 47, 0.6);
-			}
-
-			ol,
-			ul {
-				margin: 0;
-				margin-block-start: 0.6em;
-				margin-block-end: 0.6em;
-			}
-
-			li > ol:first-child,
-			li > ul:first-child {
-				margin-block-start: 0.6em;
-			}
-
-			ul > li {
-				list-style: disc;
-			}
-
-			ul.to-do-list {
-				padding-inline-start: 0;
-			}
-
-			ul.to-do-list > li {
-				list-style: none;
-			}
-
-			.to-do-children-checked {
-				text-decoration: line-through;
-				opacity: 0.375;
-			}
-
-			ul.toggle > li {
-				list-style: none;
-			}
-
-			ul {
-				padding-inline-start: 1.7em;
-			}
-
-			ul > li {
-				padding-left: 0.1em;
-			}
-
-			ol {
-				padding-inline-start: 1.6em;
-			}
-
-			ol > li {
-				padding-left: 0.2em;
-			}
-
-			.mono ol {
-				padding-inline-start: 2em;
-			}
-
-			.mono ol > li {
-				text-indent: -0.4em;
-			}
-
-			.toggle {
-				padding-inline-start: 0em;
-				list-style-type: none;
-			}
-
-			/* Indent toggle children */
-			.toggle > li > details {
-				padding-left: 1.7em;
-			}
-
-			.toggle > li > details > summary {
-				margin-left: -1.1em;
-			}
-
-			.selected-value {
-				display: inline-block;
-				padding: 0 0.5em;
-				background: rgba(206, 205, 202, 0.5);
-				border-radius: 3px;
-				margin-right: 0.5em;
-				margin-top: 0.3em;
-				margin-bottom: 0.3em;
-				white-space: nowrap;
-			}
-
-			.collection-title {
-				display: inline-block;
-				margin-right: 1em;
-			}
-
-			.page-description {
-				margin-bottom: 2em;
-			}
-
-			.simple-table {
-				margin-top: 1em;
-				font-size: 0.875rem;
-				empty-cells: show;
-			}
-			.simple-table td {
-				height: 29px;
-				min-width: 120px;
-			}
-
-			.simple-table th {
-				height: 29px;
-				min-width: 120px;
-			}
-
-			.simple-table-header-color {
-				background: rgb(247, 246, 243);
-				color: black;
-			}
-			.simple-table-header {
-				font-weight: 500;
-			}
-
-			time {
-				opacity: 0.5;
-			}
-
-			.icon {
-				display: inline-block;
-				max-width: 1.2em;
-				max-height: 1.2em;
-				text-decoration: none;
-				vertical-align: text-bottom;
-				margin-right: 0.5em;
-			}
-
-			img.icon {
-				border-radius: 3px;
-			}
-
-			.user-icon {
-				width: 1.5em;
-				height: 1.5em;
-				border-radius: 100%;
-				margin-right: 0.5rem;
-			}
-
-			.user-icon-inner {
-				font-size: 0.8em;
-			}
-
-			.text-icon {
-				border: 1px solid #000;
-				text-align: center;
-			}
-
-			.page-cover-image {
-				display: block;
-				object-fit: cover;
-				width: 100%;
-				max-height: 30vh;
-			}
-
-			.page-header-icon {
-				font-size: 3rem;
-				margin-bottom: 1rem;
-			}
-
-			.page-header-icon-with-cover {
-				margin-top: -0.72em;
-				margin-left: 0.07em;
-			}
-
-			.page-header-icon img {
-				border-radius: 3px;
-			}
-
-			.link-to-page {
-				margin: 1em 0;
-				padding: 0;
-				border: none;
-				font-weight: 500;
-			}
-
-			p > .user {
-				opacity: 0.5;
-			}
-
-			td > .user,
-			td > time {
-				white-space: nowrap;
-			}
-
-			input[type="checkbox"] {
-				transform: scale(1.5);
-				margin-right: 0.6em;
-				vertical-align: middle;
-			}
-
-			p {
-				margin-top: 0.5em;
-				margin-bottom: 0.5em;
-			}
-
-			.image {
-				border: none;
-				margin: 1.5em 0;
-				padding: 0;
-				border-radius: 0;
-				text-align: center;
-			}
-
-			.code,
-			code {
-				background: rgba(135, 131, 120, 0.15);
-				border-radius: 3px;
-				padding: 0.2em 0.4em;
-				border-radius: 3px;
-				font-size: 85%;
-				tab-size: 2;
-			}
-
-			code {
-				color: #eb5757;
-			}
-
-			.code {
-				padding: 1.5em 1em;
-			}
-
-			.code-wrap {
-				white-space: pre-wrap;
-				word-break: break-all;
-			}
-
-			.code > code {
-				background: none;
-				padding: 0;
-				font-size: 100%;
-				color: inherit;
-			}
-
-			blockquote {
-				font-size: 1.25em;
-				margin: 1em 0;
-				padding-left: 1em;
-				border-left: 3px solid rgb(55, 53, 47);
-			}
-
-			.bookmark {
-				text-decoration: none;
-				max-height: 8em;
-				padding: 0;
-				display: flex;
-				width: 100%;
-				align-items: stretch;
-			}
-
-			.bookmark-title {
-				font-size: 0.85em;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				height: 1.75em;
-				white-space: nowrap;
-			}
-
-			.bookmark-text {
-				display: flex;
-				flex-direction: column;
-			}
-
-			.bookmark-info {
-				flex: 4 1 180px;
-				padding: 12px 14px 14px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-			}
-
-			.bookmark-image {
-				width: 33%;
-				flex: 1 1 180px;
-				display: block;
-				position: relative;
-				object-fit: cover;
-				border-radius: 1px;
-			}
-
-			.bookmark-description {
-				color: rgba(55, 53, 47, 0.6);
-				font-size: 0.75em;
-				overflow: hidden;
-				max-height: 4.5em;
-				word-break: break-word;
-			}
-
-			.bookmark-href {
-				font-size: 0.75em;
-				margin-top: 0.25em;
-			}
-
-			.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-			.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-			.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-			.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-			.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-			.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-			.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-			.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-			.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-			.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-			.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-			.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-			.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-			.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-			.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-			.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-			.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-			.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-			.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-			.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-			.highlight-default {
-				color: rgba(55, 53, 47, 1);
-			}
-			.highlight-gray {
-				color: rgba(120, 119, 116, 1);
-				fill: rgba(120, 119, 116, 1);
-			}
-			.highlight-brown {
-				color: rgba(159, 107, 83, 1);
-				fill: rgba(159, 107, 83, 1);
-			}
-			.highlight-orange {
-				color: rgba(217, 115, 13, 1);
-				fill: rgba(217, 115, 13, 1);
-			}
-			.highlight-yellow {
-				color: rgba(203, 145, 47, 1);
-				fill: rgba(203, 145, 47, 1);
-			}
-			.highlight-teal {
-				color: rgba(68, 131, 97, 1);
-				fill: rgba(68, 131, 97, 1);
-			}
-			.highlight-blue {
-				color: rgba(51, 126, 169, 1);
-				fill: rgba(51, 126, 169, 1);
-			}
-			.highlight-purple {
-				color: rgba(144, 101, 176, 1);
-				fill: rgba(144, 101, 176, 1);
-			}
-			.highlight-pink {
-				color: rgba(193, 76, 138, 1);
-				fill: rgba(193, 76, 138, 1);
-			}
-			.highlight-red {
-				color: rgba(212, 76, 71, 1);
-				fill: rgba(212, 76, 71, 1);
-			}
-			.highlight-default_background {
-				color: rgba(55, 53, 47, 1);
-			}
-			.highlight-gray_background {
-				background: rgba(241, 241, 239, 1);
-			}
-			.highlight-brown_background {
-				background: rgba(244, 238, 238, 1);
-			}
-			.highlight-orange_background {
-				background: rgba(251, 236, 221, 1);
-			}
-			.highlight-yellow_background {
-				background: rgba(251, 237, 214, 1);
-			}
-			.highlight-teal_background {
-				background: rgba(237, 243, 236, 1);
-			}
-			.highlight-blue_background {
-				background: rgba(231, 243, 248, 1);
-			}
-			.highlight-purple_background {
-				background: rgba(244, 240, 247, 0.8);
-			}
-			.highlight-pink_background {
-				background: rgba(249, 238, 243, 0.8);
-			}
-			.highlight-red_background {
-				background: rgba(253, 235, 236, 1);
-			}
-			.block-color-default {
-				color: inherit;
-				fill: inherit;
-			}
-			.block-color-gray {
-				color: rgba(120, 119, 116, 1);
-				fill: rgba(120, 119, 116, 1);
-			}
-			.block-color-brown {
-				color: rgba(159, 107, 83, 1);
-				fill: rgba(159, 107, 83, 1);
-			}
-			.block-color-orange {
-				color: rgba(217, 115, 13, 1);
-				fill: rgba(217, 115, 13, 1);
-			}
-			.block-color-yellow {
-				color: rgba(203, 145, 47, 1);
-				fill: rgba(203, 145, 47, 1);
-			}
-			.block-color-teal {
-				color: rgba(68, 131, 97, 1);
-				fill: rgba(68, 131, 97, 1);
-			}
-			.block-color-blue {
-				color: rgba(51, 126, 169, 1);
-				fill: rgba(51, 126, 169, 1);
-			}
-			.block-color-purple {
-				color: rgba(144, 101, 176, 1);
-				fill: rgba(144, 101, 176, 1);
-			}
-			.block-color-pink {
-				color: rgba(193, 76, 138, 1);
-				fill: rgba(193, 76, 138, 1);
-			}
-			.block-color-red {
-				color: rgba(212, 76, 71, 1);
-				fill: rgba(212, 76, 71, 1);
-			}
-			.block-color-default_background {
-				color: inherit;
-				fill: inherit;
-			}
-			.block-color-gray_background {
-				background: rgba(241, 241, 239, 1);
-			}
-			.block-color-brown_background {
-				background: rgba(244, 238, 238, 1);
-			}
-			.block-color-orange_background {
-				background: rgba(251, 236, 221, 1);
-			}
-			.block-color-yellow_background {
-				background: rgba(251, 237, 214, 1);
-			}
-			.block-color-teal_background {
-				background: rgba(237, 243, 236, 1);
-			}
-			.block-color-blue_background {
-				background: rgba(231, 243, 248, 1);
-			}
-			.block-color-purple_background {
-				background: rgba(244, 240, 247, 0.8);
-			}
-			.block-color-pink_background {
-				background: rgba(249, 238, 243, 0.8);
-			}
-			.block-color-red_background {
-				background: rgba(253, 235, 236, 1);
-			}
-			.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
-			.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-			.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-			.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-			.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-			.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
-			.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
-			.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-			.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-			.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-			.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
-			.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-			.select-value-color-pageGlass { background-color: undefined; }
-			.select-value-color-washGlass { background-color: undefined; }
-
-			.checkbox {
-				display: inline-flex;
-				vertical-align: text-bottom;
-				width: 16;
-				height: 16;
-				background-size: 16px;
-				margin-left: 2px;
-				margin-right: 5px;
-			}
-
-			.checkbox-on {
-				background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-			}
-
-			.checkbox-off {
-				background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-			}
-				
-		</style>
 	</head>
 
 	<body>
-		<article id="321e631d-5c62-4acd-9562-c81bf25c6695" class="page sans">
-			<header>
-				<div class="page-header-icon undefined">
-					<img class="icon" src="https://www.notion.so/icons/official-document_gray.svg"/>
-				</div>
-				<h1 class="page-title">Portfolio</h1>
-				<p class="page-description">
-
-				</p>
-			</header>
+		
+		<article class="page sans">
+			
 			<div class="page-body">
-				<div id="ed903459-605b-481a-b89d-ab1c098988e6" class="column-list">
-					<div id="6fbf3565-c8c4-415c-9210-930928ab5f70" style="width:62.5%" class="column">
-						<h2 id="9a4f9392-eb39-4879-9aab-291467d3af58" class="">Hello, I'm Jason Chin.</h2>
-						<p id="7c8eea28-1025-4d0d-8a96-6bc5376c4081" class="">I&#x27;m a <strong>certified</strong> <strong>expert</strong> in Notion, helping busy people like you be more organized and productive. </p>
-						<p id="58e8e3c3-682c-40d7-9fba-72c6bd31577c" class="">I design and optimize Notion templates to be clutter-free, so you can <strong>focus on what&#x27;s important</strong> and <strong>get things done</strong>. </p>
-						<figure id="698e657f-bfe3-49c6-87f6-b0e6ef2762e3">
-							<div class="source">
-								<a href="https://indify.co/widgets/live/button/CnS1pe66vn2davyZ9jAl">https://indify.co/widgets/live/button/CnS1pe66vn2davyZ9jAl</a>
-							</div>
-						</figure>
+				
+				<div class="column-list">
+					
+					<div style="width:70%" class="column">
+
+						<header>
+							 <h1 class="page-title">Portfolio</h1>
+							<!--<p class="page-description"></p>-->
+						</header>
+						
+						<h2>marmaestro</h2>
+						
+						
+
+						<p>
+							I'm a videogame design and development student that loves to create, share, and teach.
+						</p>
+						<p>
+							I make games for university and with my friends, and have created a few tools up to date.
+						</p>
+						
+						<p>
+							<span class="selected-value">
+								<a href="https://www.linkedin.com/in/marmaestro/">Get in contact!</a>
+							</span>
+						</p>
+
 					</div>
-					<div id="3a719a3c-7433-4b8a-a8de-cd25121ce83b" style="width:37.50000000000001%" class="column">
-						<p id="f1c1d953-72bf-4ebd-869f-d310421e04f7" class=""></p>
-						<figure id="8d3e17cc-000c-461d-90a7-03ab9011443d" class="image">
-							<a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/easlo-laptop.svg">
-								<img style="width:288px" src="Portfolio%20321e631d5c624acd9562c81bf25c6695/easlo-laptop.svg"/>
+
+					<div style="width:30%" class="column">
+
+						<figure class="image">
+							<a href="media/profile-picture.jpeg">
+								<img style="width: 100%;" src="media/profile-picture.jpeg"/>
 							</a>
 						</figure>
+
 					</div>
+
 				</div>
-				<h2 id="8bbb1959-688f-4502-aea3-407de88b687d" class="">Skills</h2>
-				<div id="64703d26-2e29-4d78-a288-956246fb0084" class="collection-content">
-					<h4 class="collection-title"></h4>
-					<table class="collection-content">
-						<thead>
-							<tr>
-								<th>
-									<span class="icon property-icon">
-										<svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle">
-											<path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path>
-										</svg>
-									</span>
-								Name</th>
-								<th>
-									<span class="icon property-icon">
-										<svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path>
-										</svg>
-									</span>
-									Type</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr id="4e1b1911-1818-4b8b-8a48-bfe0eda53bfa">
-									<td class="cell-title">
-										<a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Base%20de%20datos%20sin%20ti%CC%81tulo%2064703d262e294d78a288956246fb0084/Notion%204e1b191118184b8b8a48bfe0eda53bfa.html">
-											<img class="icon" src="https://www.notion.so/icons/notion_gray.svg"/>
-											Notion
-										</a>
-									</td>
-									<td class="cell-vTK[">
-										<span class="selected-value select-value-color-default">Software</span>
-									</td>
-								</tr>
-								<tr id="faa31d14-1e0f-4015-bff5-13ed294cd0f0">
-									<td class="cell-title">
-										<a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Base%20de%20datos%20sin%20ti%CC%81tulo%2064703d262e294d78a288956246fb0084/Figma%20faa31d141e0f4015bff513ed294cd0f0.html">
-											<img class="icon" src="https://www.notion.so/icons/color-palette_gray.svg"/>
-											Figma
-										</a>
-									</td>
-									<td class="cell-vTK[">
-										<span class="selected-value select-value-color-default">Software</span>
-									</td>
-								</tr>
-								<tr id="4a43813b-e192-4f8e-909a-7d10b2aaed9c"><td class="cell-title"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Base%20de%20datos%20sin%20ti%CC%81tulo%2064703d262e294d78a288956246fb0084/Webflow%204a43813be1924f8e909a7d10b2aaed9c.html"><img class="icon" src="https://www.notion.so/icons/laptop_gray.svg"/>Webflow</a></td><td class="cell-vTK["><span class="selected-value select-value-color-default">Software</span></td></tr><tr id="5870057f-ba37-4698-ba50-0792a7709257"><td class="cell-title"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Base%20de%20datos%20sin%20ti%CC%81tulo%2064703d262e294d78a288956246fb0084/Google%20Sheets%205870057fba374698ba500792a7709257.html"><img class="icon" src="https://www.notion.so/icons/table_gray.svg"/>Google Sheets</a></td><td class="cell-vTK["><span class="selected-value select-value-color-default">Software</span></td></tr><tr id="953f18bb-cf56-42b5-a182-7bc62a5413a6"><td class="cell-title"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Base%20de%20datos%20sin%20ti%CC%81tulo%2064703d262e294d78a288956246fb0084/Final%20Cut%20Pro%20953f18bbcf5642b5a1827bc62a5413a6.html"><img class="icon" src="https://www.notion.so/icons/movie-clapboard-play_gray.svg"/>Final Cut Pro</a></td><td class="cell-vTK["><span class="selected-value select-value-color-default">Software</span></td></tr><tr id="718ba149-6d77-4472-8e39-cc7360922b8b"><td class="cell-title"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Base%20de%20datos%20sin%20ti%CC%81tulo%2064703d262e294d78a288956246fb0084/Python%20718ba1496d7744728e39cc7360922b8b.html"><img class="icon" src="https://www.notion.so/icons/code_gray.svg"/>Python</a></td><td class="cell-vTK["><span class="selected-value select-value-color-default">Software</span></td></tr></tbody></table><br/><br/></div><p id="20918149-7b89-471f-b902-63f18060df6e" class="">
+					
+				<h2 class="">Projects</h2>
 
+				<div class="column-list">
 
+					<div style="width:33.33%" class="column">
+						
+						<h4><a href="https://youtu.be/NJpaTEld0kk">Jugar y Pescar (Slow Edition)</a></h4>
+					
+						<a href="https://youtu.be/NJpaTEld0kk">
+							<img style="width: 100%;" src="media/jugar-pescar.png"/>
+						</a>
+						
+						<span class="selected-value select-value-color-yellow">
+							Documental
+						</span>
+						
+						<p>
+							Short documentary about slow gaming and fishing in video games. Made in colaboration with <a href="https://www.uji.es/departaments/com/base/labcom/">LABCOM UJI</a>.
+						</p>
 
+						<div class="column-list">
+							<div style="width:50%" class="column">
+								<p>
+									· Host<br/>
+									· Co-director<br/>
+									· Editing assistant
+								</p>
+							</div>
+							<div style="width:50%" class="column">
+								<p>
+									· Writer<br/>
+									· Co-producer
+								</p>
+							</div>
+						</div>
 
-									
-											</p>
-											<h2 id="e2be3b55-7751-4ac5-8d4b-8aa9c41777b3" class="">Projects</h2><div id="96692653-2fe6-44b7-8fc8-d45b155619b3" class="collection-content"><h4 class="collection-title">Featured Projects</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/asterisk_gray.svg" style="width:14px;height:14px"/></span>Featured</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Service</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Text</th></tr></thead><tbody><tr id="64fb5700-d6da-4560-b33b-d1eb34d6d12e"><td class="cell-title"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Featured%20Projects%20966926532fe644b78fc8d45b155619b3/Notion%20Consultation%2064fb5700d6da4560b33bd1eb34d6d12e.html"><img class="icon" src="https://www.notion.so/icons/folder_gray.svg"/>Notion Consultation</a></td><td class="cell-HF[K"><div class="checkbox checkbox-on"></div></td><td class="cell-NB`Y"><span class="selected-value select-value-color-default">Coaching</span></td><td class="cell-H{qo">A coaching session for team management in Notion.</td></tr><tr id="25032660-586c-424a-b739-8b413e22955e"><td class="cell-title"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Featured%20Projects%20966926532fe644b78fc8d45b155619b3/Custom%20Notion%20Workspace%2025032660586c424ab7398b413e22955e.html"><img class="icon" src="https://www.notion.so/icons/folder_gray.svg"/>Custom Notion Workspace</a></td><td class="cell-HF[K"><div class="checkbox checkbox-on"></div></td><td class="cell-NB`Y"><span class="selected-value select-value-color-default">Notion Workspace</span></td><td class="cell-H{qo">A workspace for business and content management.</td></tr></tbody></table><br/><br/></div><p id="8bd0fafc-5290-49e3-b612-80c52d156111" class="">
-	</p><h2 id="7115ce97-aa06-4f02-895e-bce54de0cf72" class="">Services</h2><table id="febb284a-ffb7-4fe2-aa5b-21d19c5a941e" class="simple-table"><tbody><tr id="62ebaafa-5032-4071-8ee1-d8fbcc999fa0"><td id="RFw`" class="" style="width:114px"></td><td id="MPz@" class="" style="width:281.99609375px"><strong>Notion Consultation</strong></td><td id="LSsM" class="" style="width:291px"><strong>Custom Notion Template</strong></td></tr><tr id="51f7a8c4-97e4-4f4a-88ce-e3399620c4cb"><td id="RFw`" class="" style="width:114px"><strong>Description</strong></td><td id="MPz@" class="" style="width:281.99609375px">A detailed consultation to set up Notion for optimal productivity.</td><td id="LSsM" class="" style="width:291px">Create a custom Notion template tailored to your specific needs and workflow.</td></tr><tr id="ef8b47bb-6bf6-4987-829c-509e7e197d65"><td id="RFw`" class="" style="width:114px"><strong>Pricing</strong></td><td id="MPz@" class="" style="width:281.99609375px">$500 for a 60-min session</td><td id="LSsM" class="" style="width:291px">Starts from $1,500</td></tr><tr id="3bd73ed0-6343-48ec-8a17-b0c32167776d"><td id="RFw`" class="" style="width:114px"><strong>Features</strong></td><td id="MPz@" class="" style="width:281.99609375px">• Set up customization<br/>• Optimize workflows<br/>• Integrate third-party tools<br/></td><td id="LSsM" class="" style="width:291px">• Custom-designed template<br/>• Includes template documentation<br/>• One round of revisions for adjustments<br/></td></tr></tbody></table><p id="314d01f7-c23a-4440-ab37-31bcd576c14b" class="">
-	</p><p id="6f3a4ffa-bbdb-48ec-a0ff-bcbf5adf6af9" class="">
-	</p><div id="4d05c657-9e55-44d8-8b2e-34e2b8717be1" class="column-list"><div id="50e3e1f3-4921-49ab-aedc-7911c7dad798" style="width:50%" class="column"><h2 id="46f8eda5-bbf6-4ad6-bd9c-a3d081b616cb" class="">Let’s Work Together</h2><p id="4ade4f5d-84e6-479e-ac95-adefc2f9acfd" class="">If you&#x27;re interested in working with me to maximize your efficiency in Notion, please use our contact form.</p></div><div id="4faf641a-5766-45cd-b54f-30ee373bf002" style="width:50%" class="column"><figure id="cd9f8bb1-69da-46f2-a4bf-14d61f51de79"><div class="source"><a href="https://tally.so/r/wargXn">https://tally.so/r/wargXn</a></div></figure></div></div><p id="23a859dc-116b-4189-9f4b-5bb6e5baf60a" class="">
-	</p><p id="d35ad290-9835-45a5-b4fb-a2d9a08d2345" class="">
-	</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0cb1e580-8c95-43d1-833d-f05309d9e801"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/info-alternate_gray.svg"/></div><div style="width:100%"><strong>Setup Guide</strong><hr id="bf5a8ce2-16c5-4960-a269-8c524f292e3f"/><ul id="c908145e-e234-4066-ad7a-ea328f9da715" class="toggle"><li><details open=""><summary><strong>How to publish your website</strong></summary><ol type="1" id="efc12326-a843-468d-a116-d1ffb1852d21" class="numbered-list" start="1"><li>Click on “Share” on the top right corner</li></ol><ol type="1" id="ec02116a-cc8f-4892-946f-602acbe9ef0c" class="numbered-list" start="2"><li>Go to “Publish” and click “Publish.”</li></ol><ol type="1" id="436759fe-6ddd-4da0-814a-986d753434fa" class="numbered-list" start="3"><li>Toggle off “Duplicate as template” under site customization.</li></ol><ol type="1" id="8ea6b745-1a8b-4571-8c52-273c97ad660d" class="numbered-list" start="4"><li>Copy the site link to share your portfolio with others.</li></ol></details></li></ul><hr id="9ca29fa0-9f29-4ae3-9bb8-ea84bf2eca41"/><ul id="3d5d81a8-d86c-4c0b-ac73-37f497b10bf6" class="toggle"><li><details open=""><summary><strong>How to embed a form in Notion</strong></summary><ol type="1" id="795358ea-e4ed-4966-930a-3fafe5e28523" class="numbered-list" start="1"><li>Create a free account at <a href="https://tally.so/">tally.so</a></li></ol><ol type="1" id="9076e64b-8494-4387-a553-6339ba53475e" class="numbered-list" start="2"><li>Click on create form or use one of the templates<figure id="1b4c9034-37dd-428a-af9c-a516cb531726" class="image"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.41.52.png"><img style="width:1385px" src="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.41.52.png"/></a></figure></li></ol><ol type="1" id="575fabdf-8039-429c-b301-4a896aebb7cc" class="numbered-list" start="3"><li>Customise the form</li></ol><ol type="1" id="e6351ee1-e306-4fab-94de-ae7e74fcc721" class="numbered-list" start="4"><li>Publish the form</li></ol><ol type="1" id="6eb9df90-3593-459b-a50d-9936f5d41c8a" class="numbered-list" start="5"><li>Go to Share, and click on Standard under Embed Form<figure id="a616433c-381a-4b4d-bf54-7c207a062469" class="image"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.43.02.png"><img style="width:561px" src="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.43.02.png"/></a></figure></li></ol><ol type="1" id="fa5cd336-bf52-4d17-a744-077f4b99996a" class="numbered-list" start="6"><li>Copy the Embed link<figure id="f9502241-4bbe-49e5-9134-3d4dfe4ac28e" class="image"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.44.16.png"><img style="width:388px" src="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.44.16.png"/></a></figure></li></ol><ol type="1" id="e2058476-ca4c-430c-9ac5-57fade09d5a3" class="numbered-list" start="7"><li>Create an Embed block in Notion, then paste the link</li></ol></details></li></ul><hr id="46a32838-81d1-4387-a7f0-3248fac675f2"/><ul id="ade1c3a4-9def-40f0-ac35-b0a6dd6ee78e" class="toggle"><li><details open=""><summary><strong>How to embed a button in Notion</strong></summary><ol type="1" id="f27c6da7-1106-4827-8060-1a51be281f5b" class="numbered-list" start="1"><li>Create a free account at <a href="https://indify.co/">indify.co</a></li></ol><ol type="1" id="d7798d33-87fb-480c-90ce-b581428b5882" class="numbered-list" start="2"><li>Click on the button widget<figure id="e2fa72b2-02a0-462b-9336-20fb109e1c7f" class="image"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.37.38.png"><img style="width:591px" src="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.37.38.png"/></a></figure></li></ol><ol type="1" id="c710543d-39fe-408b-bdc0-8cd36af4eb33" class="numbered-list" start="3"><li>Customize the button</li></ol><ol type="1" id="70f247bc-a3f9-4ce9-a4db-60675cc6c0a2" class="numbered-list" start="4"><li>Copy the link then paste into Notion, and click embed<figure id="868b4239-eb50-4c5a-9cd8-efd211b310b9" class="image"><a href="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.40.06.png"><img style="width:404px" src="Portfolio%20321e631d5c624acd9562c81bf25c6695/Screen_Shot_2021-11-06_at_00.40.06.png"/></a></figure><p id="7c427903-248a-4c93-9457-8ed7a5d09639" class="">
-	</p></li></ol></details></li></ul><hr id="e5dfd898-d160-47d3-82fa-eb463192dc2f"/></div></figure><p id="8c73965b-a3e3-4a13-ae8c-31adb78a52cc" class="">
-	</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+					</div>
+
+					<div style="width:33.33%" class="column">
+
+						
+						
+						<h4><a href="https://hollowblink.itch.io/growing-fear">Growing Fear (Jam edition)</a></h4>
+						
+						<a href="https://hollowblink.itch.io/growing-fear">
+							<img style="width: 100%;" src="media/growing-fear.png"/>
+						</a>
+						
+						<span class="selected-value select-value-color-green">
+							Game Jam
+						</span>
+
+						<p>
+							Farming strategic game about growing scary plants to spread the fear.<br/>
+							Made for the UJI Game Jam 2023 (Spooky Edition) with the theme <i>"Spread the fear"</i>.
+						</p>
+
+						<div class="column-list">
+							<div style="width:50%" class="column">
+								<p>
+									· Game design<br/>
+									· 2D art director
+								</p>
+							</div>
+							<div style="width:50%" class="column">
+								<p>
+									· Narrative assistant<br/>
+									· 3D art assistant
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div style="width:33.33%" class="column">
+
+						
+						
+						<h4><a href="https://punicgoose.itch.io/prop-trip">Prop Trip (Jam edition)</a></h4>
+						
+						<a href="https://punicgoose.itch.io/prop-trip">
+							<img style="width: 100%;" src="media/prop-trip.png"/>
+						</a>
+
+						<span class="selected-value select-value-color-green">
+							Game Jam
+						</span>
+
+						<p>
+							First-person high-speed shooter and platformer.<br/>
+							Made for the UJI Game Jam 2024 with the theme <i>"Anything is a weapon"</i>.
+						</p>
+
+						<div class="column-list">
+							<div style="width:50%" class="column">
+								<p>
+									· 3D art director<br/>
+									· Game design
+								</p>
+							</div>
+							<div style="width:50%" class="column">
+								<p>
+									· Narrative assistant
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+					
+				<h2 class="">Contact</h2>
+				
+				<div class="column-list">
+
+					<div style="width:35%" class="column">
+
+						<a href="mailto:marmaestromomparler@gmail.com?subject=Contact">marmaestromomparler@gmail.com</a><br/>
+						Castelló de la Plana, Spain<br/>
+						<a class="underlined" href="https://www.linkedin.com/in/marmaestro/">LinkedIn</a><br/>
+						<a class="underlined" href="https://github.com/marmaestro">GitHub</a><br/>
+						<a class="underlined" href="https://marmaestro.itch.io">itch.io</a><br/>
+
+					</div>
+
+					<div style="width:65%" class="column">
+						papapapapapapapapapapapapapapa
+					</div>
+
+				</div>
+
+			</div>
+
+		</article>
+
+		<span class="sans" style="font-size:14px;padding-top:2em"> </span>
+
+	</body>
+
+</html>
