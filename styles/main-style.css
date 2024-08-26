@@ -1,10 +1,12 @@
 /*GENERAL TEXT*/
 html {
     -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 * {
     box-sizing: border-box;
     -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 html,
@@ -62,6 +64,13 @@ h2 {
     margin-top: 1.5rem;
 }
 
+h2.projects {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-style: italic;
+    text-align: center;
+}
+
 h3 {
     font-size: 1.25rem;
     margin-top: 1.25rem;
@@ -76,6 +85,11 @@ h4 {
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+}
+
+p.projects {
+    margin-bottom: 0.5em;
+    text-align: justify;
 }
 
 .image {
@@ -209,8 +223,23 @@ code {
 	white-space: nowrap;
 }
 
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
 .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-yellow { background-color: rgb(249, 228, 188); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+
+/*
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+*/
 
 * {
     scrollbar-width: 12px;
