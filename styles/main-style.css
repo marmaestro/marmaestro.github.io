@@ -1,12 +1,21 @@
-/*GENERAL TEXT*/
-html {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
+/* WEB RELATED */
+
 * {
     box-sizing: border-box;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+
+    /* SCROLLBAR
+    scrollbar-width: 12px;
+    scrollbar-color: rgba(255, 255, 255, 0.2)  rgba(0, 0, 0, 0); */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+
+.margin {
+    margin: 5em 15em 2em 15em;
 }
 
 html,
@@ -16,8 +25,7 @@ body {
 }
 @media only screen {
     body {
-        margin: 5em auto;
-        max-width: 75%;
+        max-width: 100%;
         color: rgb(55, 53, 47);
     }
 }
@@ -25,180 +33,16 @@ body {
 body {
     line-height: 1.5;
     white-space: wrap;
-}
-
-a,
-a.visited {
-    color: inherit;
-    text-decoration: none;
-}
-
-a.underlined {
-    text-decoration: underline;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    letter-spacing: -0.01em;
-    line-height: 1.2;
-    font-weight: 600;
-    margin-bottom: 0;
-}
-
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0.75em;
-}
-
-h1 {
-    font-size: 1.875rem;
-    margin-top: 1.875rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-h2.projects {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    font-style: italic;
-    text-align: center;
-}
-
-h3 {
-    font-size: 1.25rem;
-    margin-top: 1.25rem;
-}
-
-h4 {
-    font-size: 1em;
-    margin-top: 1.25rem;
-    font-weight: 600;
+    text-align: justify;
 }
 
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    text-wrap: wrap;
 }
 
-p.projects {
-    margin-bottom: 0.5em;
-    text-align: justify;
-}
-
-.image {
-    border: none;
-    margin: 1.5em 0;
-    padding: 0;
-    border-radius: 0;
-    text-align: center;
-}
-
-/*figure {
-    margin: 1.25em 0;
-    page-break-inside: avoid;
-}*/
-
-hr {
-    background: transparent;
-    display: block;
-    width: 100%;
-    height: 1px;
-    visibility: visible;
-    border: none;
-    border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-    margin: 1.25em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
-}
-
-@page {
-    margin: 1in;
-}
-
-/*COLLECTIONS*/
-.collection-content {
-    font-size: 0.875rem;
-}
-
-.column-list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.column {
-    padding: 1em;
-}
-
-/*.column:first-child {
-    padding-left: 0;
-}
-
-.column:last-child {
-    padding-right: 0;
-}*/
-
-/*ICON*/
-.icon {
-    display: inline-block;
-    max-width: 1.2em;
-    max-height: 1.2em;
-    text-decoration: none;
-    vertical-align: text-bottom;
-    margin-right: 0.5em;
-}
-
-img.icon {
-    border-radius: 3px;
-}
-
-.text-icon {
-    border: 1px solid #000;
-    text-align: center;
-}
-
-/* CODE */ /*
-.code,
-code {
-    background: rgba(135, 131, 120, 0.15);
-    border-radius: 3px;
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-size: 85%;
-    tab-size: 2;
-}
-
-code {
-    color: #eb5757;
-}
-
-.code {
-    padding: 1.5em 1em;
-}
-
-.code-wrap {
-    white-space: pre-wrap;
-    word-break: break-all;
-}
-
-.code > code {
-    background: none;
-    padding: 0;
-    font-size: 100%;
-    color: inherit;
-}
-*/
+/* TEXT STYLE */
 
 .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
 .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
@@ -234,7 +78,154 @@ code {
 .select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
 */
 
-* {
-    scrollbar-width: 12px;
-    scrollbar-color: rgba(255, 255, 255, 0.2)  rgba(0, 0, 0, 0);
+/* LINKS */
+
+a,
+a.visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.underlined {
+    text-decoration: underline;
+}
+
+/* HEADERS */
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+h2.project-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-style: italic;
+    text-align: center;
+}
+
+h1.projects-section {
+    margin: 0em 7em 1em 7em;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+h4 {
+    font-size: 1em;
+    margin-top: 1.25rem;
+    font-weight: 600;
+}
+
+/* FIGURES, IMAGES, ICONS */
+
+/*figure {
+    margin: 1.25em 0;
+    page-break-inside: avoid;
+}*/
+
+img {
+    width: 100%;
+    margin: 1.25em 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}  
+
+img.icon {
+    border-radius: 3px;
+}
+
+img.profile {
+    margin: 1.5em 0;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.icon {
+    display: inline-block;
+    max-width: 1.2em;
+    max-height: 1.2em;
+    text-decoration: none;
+    vertical-align: text-bottom;
+    margin-right: 0.5em;
+}
+
+.text-icon {
+    border: 1px solid #000;
+    text-align: center;
+}
+
+/* SCROLLING */
+
+.project-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+
+    background: greenyellow;
+    width: 100%;
+}
+
+.project {
+    width: 35%;
+    padding-left: 20px;
+    padding-right: 20px;
+    scroll-snap-align: center none;
+    flex: none;
+    flex-direction: row;
+}
+
+.project-positions {
+    text-align: left;
+}
+
+/*.project > p {
+    
+}*/
+
+/* COLUMNS, COLLECTIONS */
+
+.column-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    padding: 1em;
 }
