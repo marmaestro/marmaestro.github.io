@@ -14,6 +14,10 @@ html {
 
 /* BODY */
 
+.margin {
+    margin: 5em 15em 2em 15em;
+}
+
 html,
 body {
     margin: 0;
@@ -21,8 +25,7 @@ body {
 }
 @media only screen {
     body {
-        margin: 5em auto;
-        max-width: 75%;
+        max-width: 100%;
         color: rgb(55, 53, 47);
     }
 }
@@ -30,16 +33,13 @@ body {
 body {
     line-height: 1.5;
     white-space: wrap;
+    text-align: justify;
 }
 
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-}
-
-p.projects {
-    margin-bottom: 0.5em;
-    text-align: justify;
+    text-wrap: wrap;
 }
 
 /* TEXT STYLE */
@@ -110,8 +110,10 @@ h4 {
 }
 
 h1 {
-    font-size: 1.875rem;
-    margin-top: 1.875rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.75em;
 }
 
 h2 {
@@ -119,11 +121,15 @@ h2 {
     margin-top: 1.5rem;
 }
 
-h2.projects {
+h2.project-title {
     font-size: 1.5rem;
     margin-top: 1rem;
     font-style: italic;
     text-align: center;
+}
+
+h1.projects-section {
+    margin: 0em 7em 1em 7em;
 }
 
 h3 {
@@ -145,23 +151,24 @@ h4 {
 }*/
 
 img {
+    width: 100%;
     margin: 1.25em 0;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-.image {
-    border: none;
-    margin: 1.5em 0;
-    padding: 0;
-    border-radius: 0;
-    text-align: center;
-}
+}  
 
 img.icon {
     border-radius: 3px;
+}
+
+img.profile {
+    margin: 1.5em 0;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .icon {
@@ -181,22 +188,36 @@ img.icon {
 /* SCROLLING */
 
 .project-container {
-    width: 90%;
-    height: auto;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x proximity;
     white-space: nowrap;
     display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+
+    background: greenyellow;
+    width: 100%;
 }
 
 .project {
-    width: 70em;
-    padding: 10px;
+    width: 35%;
+    padding-left: 20px;
+    padding-right: 20px;
     scroll-snap-align: center none;
-    flex: content;
+    flex: none;
     flex-direction: row;
 }
+
+.project-positions {
+    text-align: left;
+}
+
+/*.project > p {
+    
+}*/
 
 /* COLUMNS, COLLECTIONS */
 
