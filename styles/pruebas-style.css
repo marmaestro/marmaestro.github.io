@@ -2,10 +2,8 @@
 
 * {
     box-sizing: border-box;
-
-    /* SCROLLBAR
     scrollbar-width: 12px;
-    scrollbar-color: rgba(255, 255, 255, 0.2)  rgba(0, 0, 0, 0); */
+    scrollbar-color: rgba(255, 255, 255, 0.2)  rgba(0, 0, 0, 0);
 }
 
 html {
@@ -14,18 +12,15 @@ html {
 
 /* BODY */
 
-.margin {
-    margin: 5em 15em 2em 15em;
-}
-
 html,
 body {
-    margin: 0;
+    margin: 1.5em 0;
     padding: 0;
 }
 @media only screen {
     body {
-        max-width: 100%;
+        margin: 5em auto;
+        max-width: 60%;
         color: rgb(55, 53, 47);
     }
 }
@@ -113,7 +108,11 @@ h1 {
     font-size: 2.25rem;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 0.75em;
+    margin-bottom: 0em;
+}
+
+h1.section-title {
+    padding: 1em 0 0 0.5em;
 }
 
 h2 {
@@ -126,10 +125,6 @@ h2.project-title {
     margin-top: 1rem;
     font-style: italic;
     text-align: center;
-}
-
-h1.projects-section {
-    margin: 0em 7em 1em 7em;
 }
 
 h3 {
@@ -185,7 +180,7 @@ img.profile {
     text-align: center;
 }
 
-/* SCROLLING */
+/* SCROLLING */ /*
 
 .project-container {
     overflow-x: scroll;
@@ -226,6 +221,14 @@ img.profile {
     justify-content: space-between;
 }
 
+.project {
+    padding: 0 1em;
+}
+
 .column {
     padding: 1em;
+}
+
+.project-positions {
+    text-align: left;
 }
