@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    scrollbar-width: 12px;
+    scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.2)  rgba(0, 0, 0, 0);
 }
 
@@ -27,14 +27,14 @@ body {
 
 body {
     line-height: 1.5;
-    white-space: wrap;
+    white-space: normal;
     text-align: justify;
 }
 
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    text-wrap: wrap;
+    text-wrap: normal;
 }
 
 /* TEXT STYLE */
@@ -108,7 +108,7 @@ h1 {
     font-size: 2.25rem;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 0em;
+    margin-bottom: 0;
 }
 
 h1.section-title {
