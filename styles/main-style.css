@@ -241,6 +241,9 @@ img.profile {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    
+    /* quitar con las skills*/
+    padding: 1em 1em 0 1em;
 }
 
 .stepper-item {
@@ -285,6 +288,9 @@ img.profile {
 .comment {
     font-size: 0.75rem;
     margin: -10px 0 15px 0;
+    
+    /* quitar con las skills*/
+    padding-left: 1rem;
 }
 
 /* LABELS */
