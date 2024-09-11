@@ -112,7 +112,7 @@ h1 {
 }
 
 h1.section-title {
-    padding: 1em 0 0 0.5em;
+    padding: 0.5em 0 0 0.5em;
 }
 
 h2 {
@@ -231,4 +231,78 @@ img.profile {
 
 .project-positions {
     text-align: left;
+}
+
+/* STEPPER */
+
+.stepper-wrapper {
+    margin-top: auto;
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;;
+    flex: 1;
+}
+
+.stepper-item::before {
+    position: absolute;
+    border-bottom: 2px solid #ccc;
+    left: -50%;
+}
+
+.stepper-item::after {
+    position: absolute;
+    border-bottom: 2px solid #ccc;
+    left: 50%;
+}
+
+.stepper-item .step-counter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 12px;
+    background: #ccc;
+    margin-inline: 10px;
+}
+
+.stepper-item.completed .step-counter {
+    background-color: rgb(72, 130, 7);
+}
+
+.stepper-item .step-counter {
+    background-color: rgb(198, 205, 191);
+}
+
+.comment {
+    font-size: 0.75rem;
+    margin: -10px 0 15px 0;
+}
+
+/* LABELS */
+
+label {
+    padding-right: 15px;
+}
+
+/* SKILLs */
+
+.skills {
+    align-items: center;
+    justify-content: space-between;
+    place-items: self-start;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.skills > progress {
+    justify-self: end;
 }
