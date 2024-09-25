@@ -179,22 +179,22 @@ img.profile {
     text-align: center;
 }
 
-/* SCROLLING */ /*
+/* SCROLLING */
 
 .project-container {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: x proximity;
-    white-space: nowrap;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
     
 
     background: greenyellow;
     width: 100%;
 }
+
+/*
 
 .project {
     width: 35%;
