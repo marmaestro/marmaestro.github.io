@@ -1,0 +1,20 @@
+/* HALF PAGE COLUMNS */
+
+.half-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.half-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.half-column > a > p {
+    margin: 0.25em 0;
+}

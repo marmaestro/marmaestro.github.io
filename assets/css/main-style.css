@@ -14,7 +14,7 @@ html {
 
 html,
 body {
-    margin: 1.5em 0;
+    margin: 4em 0;
     padding: 0;
 }
 @media only screen {
@@ -34,7 +34,7 @@ body {
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    text-wrap: normal;
+    text-wrap: wrap;
 }
 
 /* TEXT STYLE */
@@ -81,8 +81,16 @@ a.visited {
     text-decoration: none;
 }
 
-a.underlined {
+a.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+p.underlined {
     text-decoration: underline;
+    padding-left: 0.5em;
 }
 
 /* HEADERS */
@@ -90,8 +98,7 @@ a.underlined {
 .page-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0.75em;
+    position: inherit;
 }
 
 h1,
@@ -169,10 +176,9 @@ img.profile {
 .icon {
     display: inline-block;
     max-width: 1.2em;
-    max-height: 1.2em;
-    text-decoration: none;
-    vertical-align: text-bottom;
-    margin-right: 0.5em;
+    height: auto;
+    vertical-align: middle;
+    margin: -1.25em 0;
 }
 
 .text-icon {
@@ -180,22 +186,22 @@ img.profile {
     text-align: center;
 }
 
-/* SCROLLING */ /*
+/* SCROLLING */
 
 .project-container {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: x proximity;
-    white-space: nowrap;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
     
 
     background: greenyellow;
     width: 100%;
 }
+
+/*
 
 .project {
     width: 35%;
@@ -299,7 +305,7 @@ label {
     padding-right: 15px;
 }
 
-/* SKILLs */
+/* SKILLS */
 
 .skills {
     align-items: center;
@@ -311,4 +317,27 @@ label {
 
 .skills > progress {
     justify-self: end;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    padding-bottom: 1em;
+}
+
+#navbar div {
+    display: flex;
+}
+
+#navbar a {
+    float: right;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
 }
