@@ -81,8 +81,16 @@ a.visited {
     text-decoration: none;
 }
 
-a.underlined {
+a.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+p.underlined {
     text-decoration: underline;
+    padding-left: 0.5em;
 }
 
 /* HEADERS */
@@ -168,10 +176,9 @@ img.profile {
 .icon {
     display: inline-block;
     max-width: 1.2em;
-    max-height: 1.2em;
-    text-decoration: none;
-    vertical-align: text-bottom;
-    margin-right: 0.5em;
+    height: auto;
+    vertical-align: middle;
+    margin: -1.25em 0;
 }
 
 .text-icon {
