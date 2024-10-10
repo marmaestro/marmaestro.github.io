@@ -18,3 +18,12 @@
 .half-column > a > p {
     margin: 0.25em 0;
 }
+
+/* CHANGE BODY WIDTH IN PAGE */
+@media only screen {
+    body {
+        margin: 5em auto;
+        max-width: 40%;
+        color: rgb(55, 53, 47);
+    }
+}
