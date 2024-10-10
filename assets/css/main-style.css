@@ -88,6 +88,10 @@ a.contact {
     align-items: center;
 }
 
+a.underlined {
+    text-decoration: underline;
+}
+
 p.underlined {
     text-decoration: underline;
     padding-left: 0.5em;
