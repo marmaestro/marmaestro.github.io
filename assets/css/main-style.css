@@ -190,39 +190,28 @@ img.profile {
     text-align: center;
 }
 
-/* SCROLLING */
+/* PROJECT FLEX */
 
 .project-container {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: space-between;
-    
+}
 
-    background: greenyellow;
+.project-container > div {
+    flex: 1 1 20rem;
+    margin: 0.2rem;
+    padding: 0 1em;
+}
+
+.project-roles {
+    display: flex;
     width: 100%;
 }
 
-/*
-
-.project {
-    width: 35%;
-    padding-left: 20px;
-    padding-right: 20px;
-    scroll-snap-align: center none;
-    flex: none;
-    flex-direction: row;
+.project-roles > p {
+    flex: 1 1 20rem;
+    margin: 0.2rem;
 }
-
-.project-positions {
-    text-align: left;
-}
-
-/*.project > p {
-    
-}*/
 
 /* COLUMNS, COLLECTIONS */
 
@@ -231,16 +220,8 @@ img.profile {
     justify-content: space-between;
 }
 
-.project {
-    padding: 0 1em;
-}
-
 .column {
     padding: 1em;
-}
-
-.project-positions {
-    text-align: left;
 }
 
 /* STEPPER */
