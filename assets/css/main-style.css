@@ -2,8 +2,8 @@
 
 * {
     box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.2)  rgba(0, 0, 0, 0);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 html {
@@ -20,7 +20,7 @@ body {
 
 @media screen {
     body {
-        margin: 5em auto;
+        margin: 0 auto;
         color: rgb(55, 53, 47);
     }
 }
@@ -150,6 +150,7 @@ body {
         top: 0;
         overflow: hidden;
         background-color: white;
+        padding-top: 5vw;
         padding-bottom: 1em;
         flex-direction: column;
     }
@@ -331,6 +332,10 @@ img.profile {
     text-align: center;
 }
 
+img.copyright {
+    margin: 0;
+}
+
 .icon {
     display: inline-block;
     max-width: 1.2em;
@@ -445,4 +450,16 @@ label {
 
 .skills > progress {
     justify-self: end;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    margin-top: 3.5rem;
+    padding: 1.5rem;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    background-color: #e7e7e7;
+    font-size: 0.85rem;
 }
