@@ -1,11 +1,16 @@
 /* GALLERY */
 
-/* CHANGE BODY WIDTH IN PAGE */
-@media only screen {
+/* PC AND TABLET */
+@media screen and (min-width: 600px) {
     body {
-        margin: 5em auto;
         max-width: 80%;
-        color: rgb(55, 53, 47);
+    }
+}
+
+/* SMARTPHONES */
+@media screen and (max-width: 600px) {
+    body {
+        max-width: 90%;
     }
 }
 
