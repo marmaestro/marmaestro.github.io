@@ -29,6 +29,7 @@ body {
 @media screen and (min-width: 900px) {
     body {
         max-width: 60%;
+        font-size: 1.25rem;
     }
 
     .page-title {
@@ -70,6 +71,7 @@ body {
 
     #introduction-text {
         width: 60%;
+        font-size: 1.5rem;
     }
     
     #introduction-picture {
@@ -357,7 +359,7 @@ img.copyright {
 }
 
 .project-container > div {
-    flex: 1 1 20rem;
+    flex: 1 1 25%;
     margin: 0.2rem;
     padding: 0 1em;
 }
