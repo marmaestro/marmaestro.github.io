@@ -1,19 +1,4 @@
 /* GALLERY */
-
-/* PC AND TABLET */
-@media screen and (min-width: 600px) {
-    body {
-        max-width: 80%;
-    }
-}
-
-/* SMARTPHONES */
-@media screen and (max-width: 600px) {
-    body {
-        max-width: 90%;
-    }
-}
-
 #gallery {
     display: flex;
     flex-wrap: wrap;

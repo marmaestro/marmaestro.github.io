@@ -5,9 +5,6 @@
 @media screen and (min-width: 900px) {
     /* HALF PAGE COLUMNS */
     .half-page {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         flex-direction: row;
     }
 
@@ -18,24 +15,13 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
-
-    .half-column > a > p {
-        margin: 0.25em 0;
-    }
 }
 
 /* TABLETS*/
 @media screen and (min-width: 600px) and (max-width: 900px) {
     /* HALF PAGE COLUMNS */
     .half-page {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         flex-direction: column;
-    }
-
-    .half-column > a > p {
-        margin: 0.25em 0;
     }
 
     .selected-value {
@@ -47,19 +33,23 @@
 @media screen and (max-width: 600px) {
     /* HALF PAGE COLUMNS */
     .half-page {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         flex-direction: column;
-    }
-
-    .half-column > a > p {
-        margin: 0.25em 0;
     }
     
     .selected-value {
         margin-top: 5vw;
     }
+}
+
+/* HALF PAGE COLUMNS */
+.half-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.half-column > a > p {
+    margin: 0.25em 0;
 }
 
 /* FOOTER */
