@@ -22,14 +22,18 @@ body {
     body {
         margin: 0 auto;
         color: rgb(55, 53, 47);
+        font-size: 1rem;
     }
+}
+
+#introduction-text {
+    font-size: 1.1rem;
 }
 
 /* PC */
 @media screen and (min-width: 900px) {
     body {
-        max-width: 60%;
-        font-size: 1.25rem;
+        max-width: 70%;
     }
 
     .page-title {
@@ -71,7 +75,6 @@ body {
 
     #introduction-text {
         width: 60%;
-        font-size: 1.5rem;
     }
     
     #introduction-picture {
@@ -353,6 +356,10 @@ img.copyright {
 
 /* PROJECT FLEX */
 
+.project {
+    min-width: 18rem;
+}
+
 .project-container {
     display: flex;
     flex-wrap: wrap;
@@ -370,8 +377,9 @@ img.copyright {
 }
 
 .project-roles > p {
-    flex: 1 1 20rem;
-    margin: 0.2rem;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #555555;
 }
 
 /* STEPPER */
