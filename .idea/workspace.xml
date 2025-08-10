@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="resume-404-error" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,47 +58,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.Essays.executor": "Run",
-    "JavaScript Debug.Gallery.executor": "Run",
-    "JavaScript Debug.Main.executor": "Run",
-    "JavaScript Debug.gallery.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "resume-404-error",
-    "ignore.virus.scanning.warn.message": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "proofread",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.Essays.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Gallery.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.gallery.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JavaScript Debug.Main">
-    <configuration name="Contact" type="JavascriptDebugType" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:63342/marmaestro.github.io/contact.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
+    <configuration name="Contact" type="JavascriptDebugType" uri="http://localhost:63342/marmaestro.github.io/contact.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Essays" type="JavascriptDebugType" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:63342/marmaestro.github.io/essays.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
+    <configuration name="Essays" type="JavascriptDebugType" uri="http://localhost:63342/marmaestro.github.io/essays.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Gallery" type="JavascriptDebugType" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:63342/marmaestro.github.io/gallery.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
+    <configuration name="Gallery" type="JavascriptDebugType" uri="http://localhost:63342/marmaestro.github.io/gallery.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Main" type="JavascriptDebugType" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:63342/marmaestro.github.io/index.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
+    <configuration name="Main" type="JavascriptDebugType" uri="http://localhost:63342/marmaestro.github.io/index.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <list>
@@ -124,7 +124,9 @@
       <workItem from="1739290103153" duration="11812000" />
       <workItem from="1739343733087" duration="6645000" />
       <workItem from="1739969269034" duration="1047000" />
-      <workItem from="1748091387365" duration="4812000" />
+      <workItem from="1748091387365" duration="5719000" />
+      <workItem from="1748507492800" duration="550000" />
+      <workItem from="1750530812086" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="Fixes:&#10;&#10;- More coherent sizing&#10;- Min value for project width&#10;- Better project roles">
       <option name="closed" value="true" />
@@ -134,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748098863307</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Last fixes:&#10;&#10;- Coherent scaling&#10;- 404 fix">
+      <option name="closed" value="true" />
+      <created>1748102478198</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748102478198</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +166,26 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Fixes:&#10;&#10;- More coherent sizing&#10;- Min value for project width&#10;- Better project roles" />
+    <MESSAGE value="Last fixes:&#10;&#10;- Coherent scaling&#10;- 404 fix" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

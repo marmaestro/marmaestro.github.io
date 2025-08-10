@@ -164,6 +164,7 @@ p {
 .select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
 .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
 .select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
 
 /*
 .select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
@@ -172,7 +173,6 @@ p {
 .select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
 .select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
 .select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
 .select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
 .select-value-color-red { background-color: rgba(255, 226, 221, 1); }
 .select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
